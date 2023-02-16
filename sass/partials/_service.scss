@@ -1,0 +1,74 @@
+@use "./variables";
+
+// --------------------------------------
+
+// GRID Y ARTICLES
+
+.grid_container_service{
+    width: auto;
+    margin: 20px 85px;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    padding: 0px 50px;
+
+    article{
+        border: 1px solid black;
+        width: auto;
+        margin: 0px auto;
+        box-shadow: 10px 7px 114px 5px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 7px 114px 5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 7px 114px 5px rgba(0,0,0,0.75);
+    }
+    
+    .grid_service_col_1{
+        grid-column: span 4;
+
+        img{
+            width: 450px;
+            padding: 15px;
+        }
+
+        div{
+            p{
+                padding: 20px 225px;
+            }  
+        }
+        a{
+            button{
+                @extend %button;
+                margin-bottom: 15px;
+
+                .button_top{
+                    @extend %button_top;
+                }
+            }
+        }
+    }
+}
+
+// --------------------------------------------------------------
+
+// -----  TABLET Y MOBILE  ----
+@media screen and (max-width: 850px){
+    .grid_container_service{
+        grid-template-columns: 1fr;
+        margin: 20px 10px;
+        text-align: center;
+        padding: 0px;
+        
+        .grid_service_col_1{
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+            div{
+                p{
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}

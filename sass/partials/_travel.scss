@@ -1,0 +1,146 @@
+@use "./variables";
+
+.t-center-travel{
+    @extend %t-center-travel;
+}
+
+// ----------------------------------------------------------------------
+
+// ---- GRID Y ARTICLES  ----
+
+.grid_container_travel {
+    @extend %grid_container_travel;
+
+    article {
+        @extend %card_travel;
+    }
+
+    .grid_travel_col_1 {
+        grid-column: span 4;
+
+        img {
+            width: min(100% - 10px, 600px);
+            padding: 15px;
+        }
+    }
+
+    .flex_item_travel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .travel_text_buybutton{
+            height: 100%;
+            width: 100%;
+            justify-content: space-evenly;
+            padding: 30px;
+
+            .p{
+                margin-bottom: 30px;
+            }
+            h2{
+                margin-bottom: 25px;
+                font-size: 50px;
+            }
+            button{
+                    
+                @extend %button;
+
+                .button_top{
+                    @extend %button_top;
+                }
+
+                &:hover .button_top{
+                    transform: translateY(-0.33em);
+                }
+
+                &:active .button_top{
+                    transform: translateY(0);
+                }
+            }
+            
+        }
+
+        .travel_img {
+
+            .zoom_1 {
+                padding: 35px;
+                transition: transform .2s; /* Animation */  
+                margin: 0 auto;
+                transform: rotate(8deg) translate(-1px,0px);
+                -webkit-transform: rotate(8deg) translate(-1px,0px);
+                -moz-transform: rotate(8deg) translate(-1px,0px);
+
+                &:hover {
+                    transform: scale(1.15); 
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+
+            .zoom_2 {
+                padding: 35px;
+                transition: transform .2s; /* Animation */  
+                margin: 0 auto;
+                transform: rotate(354deg) translate(-1px,0px);
+                -webkit-transform: rotate(354deg) translate(-1px,0px);
+                -moz-transform: rotate(354deg) translate(-1px,0px);
+
+                &:hover {
+                    transform: scale(1.15); 
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+    
+}
+
+
+// ------------------------------------------------------------------------
+
+// ---MOBILE Y TABLET-----
+
+@media screen and (max-width: 1200px) {
+    .grid_container_travel article{
+        margin: 0;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .grid_container_travel{
+        grid-template-columns: 1fr;
+        margin: 20px 10px;
+        text-align: center;
+
+        .grid_travel_col_1 {
+            grid-column: span 2;
+        }
+
+        .flex_item_travel {
+            flex-direction: column-reverse;
+
+            .travel_img {
+
+                img {
+                    width: min(100% - 10px, 600px)
+                }
+            }
+        }
+
+        .col_travel_reverse{
+            flex-direction: column!important;
+        }
+    
+    }
+}
+
+
+

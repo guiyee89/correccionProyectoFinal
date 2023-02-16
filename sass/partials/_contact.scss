@@ -1,0 +1,33 @@
+@use "./variables";
+
+body{
+    overflow-x: hidden;
+}
+
+section{
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+
+    form{
+        
+        margin-left: 10px;
+
+        .form-padding{
+            margin-right: 20px;
+            margin: 20px;
+        }
+        .col-12{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;       
+        }
+        
+    }
+}
+@media screen and (max-width: 850px){
+    section{
+        margin: 12px;
+    }
+    
+}

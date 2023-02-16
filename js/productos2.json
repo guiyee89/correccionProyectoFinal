@@ -1,0 +1,94 @@
+  {
+    "travel": [
+      {
+        "id": "viaje-01",
+        "title": "Sydney",
+        "img": ["../image/sydney0.jpg", "../image/sydney2.jpg"],
+        "price": 1200,
+        "cat": {
+          "name": "Traveling options",
+          "id": "trips"
+        },
+        "description1": "Whether you visit Australia for business or leisure, Four Points by Sheraton Sydney, Central Park makes your stay worthwhile. Stay and enjoy excellent service, thoughtful amenities and a prime location in Sydney's central Chippendale neighbourhood. Our hotel is near Sydney CBD, Central Station, the ICC Sydney and numerous shops and restaurants.",
+        "description2": "Every corner of Brisbane has its own unique style and charm. From a seaside stroll on the Bayside to leafy hills and boutique shopping in Paddington and late-night escapades in Fortitude Valley, use the below links to learn more about Brisbane’s wide range of experiences."
+      },
+      {
+        "id": "viaje-02",
+        "title": "Melbourne",
+        "img": ["../image/melbourne1.jpg", "../image/melbourne3.jpg"],
+        "price": 1100,
+        "cat": {
+          "name": "Traveling options",
+          "id": "trips"
+        },
+        "description1":"Welcome to Melbourne’s number one Virtual Reality game centre in Kew East. With 8 VR stations offering state of the art, wireless VR it is the BEST place for some School Holidays FUN!",
+        "description2": "The kids will have a blast playing the latest single and multiplayer VR games. Blast robots, solve puzzles as a team, or create chaos in the virtual kitchen! There is something for everyone, with over 20 games to choose from including favourites like Beat Sabre, Job Simulator, Superhot, Epic Roller Coasters or Google Earth VR! Plus our fantastic team multiplayer VR Escape Adventures or our amazing 737 Jet simulator with a full cockpit and trained pilot!"
+      },
+      {
+        "id": "viaje-03",
+        "title": "Brisbane",
+        "img": ["../image/brisbane0.jpg", "../image/brisbane2.jpg"],
+        "price": 1000,
+        "cat": {
+          "name": "Traveling options",
+          "id": "trips"
+        },
+        "description1": "Want to know where Brisbane locals eat, drink and play? From the heart of the city to our beautiful suburbs and the wider Brisbane Region, here’s what you need to know about every iconic Brisbane experience – and some hidden gems. Whether it’s a world-class dining experience, an exclusive cultural attraction or a scenic adventure into the great outdoors, you’ll love exploring everything the Brisbane Region has to offer.",
+        "description2": "Every corner of Brisbane has its own unique style and charm. From a seaside stroll on the Bayside to leafy hills and boutique shopping in Paddington and late-night escapades in Fortitude Valley, use the below links to learn more about Brisbane’s wide range of experiences."
+      },
+      {
+        "id": "viaje-04",
+        "title": "Gold Coast",
+        "img": ["../image/goldcoast0.jpg","../image/goldcoast2.jpg"],
+        "price": 950,
+        "cat": {
+          "name": "Traveling options",
+          "id": "trips"
+        },
+        "description1":"Destination Gold Coast acknowledges the Traditional Custodians of the land on which we are situated, the Kombumerri families of the Yugambeh Language Region.",
+        "description2":"We pay our respects to their Elders past, present and emerging, and recognise their continuing connections to the lands, waters and their extended communities throughout Southeast Queensland."
+      }
+    ],
+    "services": [
+      {
+        "id": "servicio-01",
+        "title": "Healthcare Insurance",
+        "img": ["../image/servicio1.jpg"],
+        "price": 150,
+        "cat": {
+          "name": "Services",
+          "id": "services"
+        }
+      },
+      {
+        "id": "servicio-02",
+        "title": "Luggage Insurance",
+        "img": ["../image/servicio2.jpg"],
+        "price": 50,
+        "cat": {
+          "name": "Services",
+          "id": "services"
+        }
+      },
+      {
+        "id": "servicio-03",
+        "title": "Planning your trip",
+        "img": ["../image/servicio3.jpg"],
+        "price": 40,
+        "cat": {
+          "name": "Services",
+          "id": "services"
+        }
+      },
+      {
+        "id": "servicio-04",
+        "title": "24/7 Customer Service",
+        "img": ["../image/servicio4.jpg"],
+        "price": 35,
+        "cat": {
+          "name": "Services",
+          "id": "services"
+        }
+      }
+    ]
+  }
