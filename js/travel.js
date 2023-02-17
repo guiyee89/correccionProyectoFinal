@@ -5,12 +5,15 @@ fetch("../js/productos2.json")
     .then(response => response.json())
     .then(data => {
         productos = data.travel;
-        console.log(productos);
         addProducts(productos);
     });
 
 const containerSection = document.querySelector("#container-section");
 const numberCart = document.querySelector("#numerito");
+let cart = localStorage.getItem("shoppingCart") 
+cart = JSON.parse(cart);
+console.log(cart)
+let shoppingCart = cart
 
 function addProducts(productSelect) {
     productSelect.forEach(producto => {
@@ -46,7 +49,7 @@ function addingButton() {
     });
 }
 
-let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || { items: [], count: 0 };
+shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || { items: [], count: 0 };
 console.log('shoppingCart:', shoppingCart);
 
 function addCart(e) {
@@ -54,15 +57,17 @@ function addCart(e) {
     const addedProduct = productos.find(producto => producto.id === id);
     console.log(addedProduct);
 
-    // Check if the product already exists in the cart
+    // Checkeando if the product already exists in the cart
+   
     const existingProduct = shoppingCart.items.find(item => item.id === addedProduct.id);
     if (existingProduct) {
         existingProduct.quantity++;
-    } else {
+        console.log(existingProduct)
+      } else {
         // Add the selected product to the shopping cart
         shoppingCart.items.push({ ...addedProduct, quantity: 1 });
-    }
-
+      }
+    
     // Update the cart count
     shoppingCart.count += 1;
     numberCart.innerText = shoppingCart.count;
@@ -74,10 +79,14 @@ function addCart(e) {
     const updatedShoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || { items: [], count: 0 };
     shoppingCart.items = updatedShoppingCart.items;
     shoppingCart.count = updatedShoppingCart.count;
+
 }
+
 localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+
+
 window.addEventListener("pageshow", () => {
-    const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || { items: [], count: 0 };
+    shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || { items: [], count: 0 };
     numberCart.innerText = shoppingCart.count;
   });
 

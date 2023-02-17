@@ -1,4 +1,4 @@
-let cart = localStorage.getItem("productos-en-cart");
+let cart = localStorage.getItem("shoppingCart");
 cart = JSON.parse(cart);
 
 const empty = document.querySelector("#carrito-vacio");
@@ -85,7 +85,7 @@ function deleteProduct(e) {
   cart.splice(index, 1);
   addToCart();
 
-  localStorage.setItem("productos-en-cart", JSON.stringify(cart));
+  localStorage.setItem("shoppingCart", JSON.stringify(cart));
   console.log(cart)
 
   Toastify({
@@ -123,7 +123,7 @@ function vaciarCarrito() {
   }).then((result) => {
     if (result.isConfirmed) {
       cart.length= 0;
-      localStorage.setItem("productos-en-cart", JSON.stringify(cart));
+      localStorage.setItem("shoppingCart", JSON.stringify(cart));
       addToCart()
     }
   })
@@ -155,7 +155,7 @@ function buyProducts() {
       })
 
       cart.length= 0;
-      localStorage.setItem("productos-en-cart", JSON.stringify(cart));
+      localStorage.setItem("shoppingCart", JSON.stringify(cart));
    
       empty.classList.add("disabled");
       product.classList.add("disabled");
